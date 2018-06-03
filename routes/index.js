@@ -15,6 +15,7 @@ var routes = {
 exports = module.exports = function (app) {
 	// Views
 	app.get('/', routes.views.index);
+	app.get('/cv', routes.views.cv);
 	app.get('/gallery', routes.views.gallery);
 	app.all('/contact', routes.views.contact);
 

@@ -1,0 +1,22 @@
+{% extends "layouts/default.html" %}
+
+{% block intro %}
+	<div class="container">
+		<h1>CV</h1>
+	</div>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+  {% if items.length %}
+    {% for item in items %}
+      <h2>{{ item.name }}
+        {% if item.publishedDate %}
+          <span class="pull-right text-muted">{{ Cv._.publishedDate.format("Do MMM YYYY") }}</span>
+        {% endif %}
+      </h2>
+    {% endfor %}
+  {% else %}
+    <h3 class="text-muted">There are no CV items yet.</h3>
+  {% endif %}
+</div>{% endblock %}

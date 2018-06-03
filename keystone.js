@@ -8,8 +8,8 @@ var cons = require('consolidate');
 var nunjucks = require('nunjucks');
 
 keystone.init({
-	'name': 'portfolio-website',
-	'brand': 'portfolio-website',
+	'name': 'Ben Furber',
+	'brand': 'Ben Furber',
 
 	'less': 'public',
 	'static': 'public',
@@ -35,6 +35,7 @@ keystone.set('locals', {
 keystone.set('routes', require('./routes'));
 
 keystone.set('nav', {
+	cvs: 'cvs',
 	galleries: 'galleries',
 	enquiries: 'enquiries',
 	users: 'users',
