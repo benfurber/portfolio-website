@@ -39,6 +39,7 @@
 
 			{# Customise your site"s navigation by changing the navLinks Array in ./routes/middleware.js
 			   ... or completely change this header to suit your design. #}
+				 {#
 			<div role="navigation" class="navbar navbar-default">
 				<div class="container-fluid">
 					<div class="navbar-header">
@@ -60,7 +61,7 @@
 						</ul>
 					</div>
 				</div>
-			</div>
+			</div> #}
 		</div>
 
 		{# BODY #}
@@ -83,7 +84,7 @@
 
 		{# FOOTER #}
 		<div id="footer" class="container">
-			<p><a href="https://github.com/benfurber/portfolio-website/" target="_blank">Powered by my set-up of KeystoneJS on GitHub</a>.</p>
+			<p><a href="https://github.com/benfurber/portfolio-website/" target="_blank">Powered by my repo of KeystoneJS</a></p>
 			<p>
 				{% if user %}
 					{% if user.canAccessKeystone %}
