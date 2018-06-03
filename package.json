@@ -9,7 +9,10 @@
     "nunjucks": "3.0.0",
     "dotenv": "4.0.0",
     "keystone-email": "1.0.5",
-    "async": "2.1.4"
+    "async": "2.1.4",
+    "moment": "2.19.3",
+    "marked": "0.3.9",
+    "hoek": "4.2.1"
   },
   "devDependencies": {
     "eslint": "3.15.0",
