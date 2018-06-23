@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Header } from 'semantic-ui-react'
+import HeaderMenu from '../HeaderMenu/HeaderMenu'
 
 class AppHeader extends Component {
   render() {
@@ -8,6 +9,7 @@ class AppHeader extends Component {
         <Header>
           <h1 className="App-title">Ben Furber</h1>
         </Header>
+        <HeaderMenu />
       </div>
     );
   }
