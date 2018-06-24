@@ -7,7 +7,10 @@ class AppHeader extends Component {
     return (
       <Segment inverted className="AppHeader" textAlign="center">
         <Header>
-          <h1 className="App-title">&#x3C; Ben Furber /&#62;</h1>
+          <h1 className="App-title">
+            &#x3C; Ben Furber /&#62;<br/>
+            Product manager turned developer
+          </h1>
         </Header>
         <HeaderMenu />
       </Segment>
