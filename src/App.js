@@ -15,7 +15,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <Container className="App" textAlign="center">
+        <Container className="App">
           <Divider hidden="true" />
           <AppHeader />
           <Switch>
