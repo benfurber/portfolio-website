@@ -8,6 +8,7 @@
 
 # production
 /build
+/public/analytics.js
 
 # misc
 .DS_Store
