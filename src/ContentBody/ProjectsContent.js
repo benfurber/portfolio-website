@@ -17,13 +17,19 @@ class ProjectsContent extends Component {
               <p>
                 <Button.Group basic icon>
                   <Button icon size='tiny'>
-                    <Icon inverted color='black' size='large' name='react' />
+                    <Icon inverted color='blue' size='large' name='react' />
                   </Button>
                   <Button icon size='tiny'>
-                    <Icon inverted color='black' size='large' name='js' />
+                    <Icon inverted color='yellow' size='large' name='js' />
                   </Button>
-                  <Button size='tiny'>Jest</Button>
-                  <Button size='tiny'>Semantic UI</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group>
+                  <Button basic size='tiny' color='red'>Jest</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group>
+                  <Button basic size='tiny' color='teal'>Semantic UI</Button>
                 </Button.Group>
               </p>
 
@@ -41,12 +47,18 @@ class ProjectsContent extends Component {
             <Grid.Column width={11}>
               <h3>MakersBnb</h3>
               <p>
-                <Button.Group basic icon>
-                  <Button size='tiny'>Ruby</Button>
-                  <Button size='tiny'>Sinatra</Button>
-                  <Button size='tiny'>RSpec</Button>
-                  <Button size='tiny'>Capybara</Button>
-                  <Button size='tiny'>Semantic UI</Button>
+                <Button.Group icon>
+                  <Button basic size='tiny' color='red'>Ruby</Button>
+                  <Button basic size='tiny' color='red'>Sinatra</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group>
+                  <Button basic size='tiny' color='red'>RSpec</Button>
+                  <Button basic size='tiny' color='purple'>Capybara</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group>
+                  <Button basic size='tiny' color='teal'>Semantic UI</Button>
                 </Button.Group>
               </p>
 
@@ -65,9 +77,14 @@ class ProjectsContent extends Component {
               <p>
                 <Button.Group basic icon>
                   <Button icon size='tiny'>
-                    <Icon inverted color='black' size='large' name='js' />
+                    <Icon inverted color='yellow' size='large' name='js' />
                   </Button>
-                  <Button size='tiny'>AWS</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group basic icon>
+                  <Button size='tiny'>
+                    <Icon inverted color='orange' size='large' name='aws' />
+                  </Button>
                 </Button.Group>
               </p>
 
@@ -86,14 +103,20 @@ class ProjectsContent extends Component {
               <p>
                 <Button.Group basic icon>
                   <Button icon size='tiny'>
-                    <Icon inverted color='black' size='large' name='js' />
+                    <Icon inverted color='yellow' size='large' name='js' />
                   </Button>
                   <Button icon size='tiny'>
-                    <Icon inverted color='black' size='large' name='node' />
+                    <Icon inverted color='green' size='large' name='node' />
                   </Button>
-                  <Button size='tiny'>AWS</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group basic icon>
                   <Button size='tiny'>D3</Button>
                   <Button size='tiny'>chart.js</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group icon>
+                  <Button basic size='tiny' color='purple'>Bootstrap</Button>
                 </Button.Group>
               </p>
 
@@ -110,12 +133,21 @@ class ProjectsContent extends Component {
             <Grid.Column width={11}>
               <h3>Fishnet</h3>
               <p>
+                <Button.Group icon>
+                  <Button basic color='red' size='tiny'>Ruby on Rails</Button>
+                </Button.Group>
+                {' '}
                 <Button.Group basic icon>
-                  <Button size='tiny'>Ruby on Rails</Button>
                   <Button size='tiny'>Devise</Button>
-                  <Button size='tiny'>RSpec</Button>
-                  <Button size='tiny'>Capybara</Button>
-                  <Button size='tiny'>Bootstrap</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group icon>
+                  <Button basic size='tiny' color='red'>RSpec</Button>
+                  <Button basic size='tiny' color='purple'>Capybara</Button>
+                </Button.Group>
+                {' '}
+                <Button.Group icon>
+                  <Button basic size='tiny' color='purple'>Bootstrap</Button>
                 </Button.Group>
               </p>
 

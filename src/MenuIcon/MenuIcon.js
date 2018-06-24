@@ -19,6 +19,7 @@ class MenuIcon extends Component {
           content={labelContent}
           size='small'
           position='bottom center'
+          on='hover'
         />
       </Link>
     );
