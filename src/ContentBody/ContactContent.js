@@ -3,6 +3,7 @@ import { Container, Divider, Icon } from 'semantic-ui-react'
 
 class ContactContent extends Component {
   render() {
+    document.title = 'Contact - Ben Furber';
     return (
       <Container text textAlign='center' className='ContactContent'>
         <h2>Contact Ben</h2>

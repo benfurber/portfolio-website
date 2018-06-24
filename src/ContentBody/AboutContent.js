@@ -12,6 +12,7 @@ const panes = [
 
 class AboutContent extends Component {
   render() {
+    document.title = 'About - Ben Furber';
     return (
       <Container text className='AboutContent'>
         <Container>

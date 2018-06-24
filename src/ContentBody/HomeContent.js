@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 
 class HomeContent extends Component {
   render() {
+    document.title = 'Ben Furber - Portfolio Website';
     return (
       <Container text className='HomeContent'>
         <Divider hidden />

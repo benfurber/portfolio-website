@@ -3,6 +3,7 @@ import { Button, Container, Divider, Embed, Grid, Icon } from 'semantic-ui-react
 
 class ProjectsContent extends Component {
   render() {
+    document.title = 'Projects - Ben Furber';
     return (
       <Container className='ProjectsContent'>
         <h2>Projects</h2>

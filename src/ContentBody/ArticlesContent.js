@@ -4,6 +4,7 @@ import ArticleSnippet from '../ArticleSnippet/ArticleSnippet'
 
 class ArticlesContent extends Component {
   render() {
+    document.title = 'Articles - Ben Furber';
     return (
       <Container text className='ArticlesContent'>
         <ArticleSnippet
