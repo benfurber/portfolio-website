@@ -7,7 +7,7 @@ class ProjectsContent extends Component {
     return (
       <Container className='ProjectsContent'>
         <h2>Projects</h2>
-        <Grid>
+        <Grid stackable='true'>
           <Grid.Row>
             <Grid.Column width={5}>
               <img src='/images/bowling.png' alt='Bowling Challenge' />

@@ -14,7 +14,7 @@ class HomeContent extends Component {
           He has learned to be a developer at <a href="http://makers.tech/">Makers Academy</a>.
         </p>
         <Divider hidden />
-        <Grid>
+        <Grid stackable='true'>
           <Grid.Row>
             <Grid.Column width={4} textAlign='center'>
               <Link to='/about'>
