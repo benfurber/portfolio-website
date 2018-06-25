@@ -13,8 +13,8 @@ class ArticleSnippet extends Component {
         <h3><a href={link}>{title}</a> - {date}</h3>
         <Grid>
           <Grid.Row>
-            <Grid.Column width={2}>
-              <Icon name='quote left' color='grey' />
+            <Grid.Column width={2} textAlign='center'>
+              <Icon name='quote left' color='grey' size='big' />
             </Grid.Column>
 
             <Grid.Column width={14}>
