@@ -14,7 +14,7 @@ class ArticleSnippet extends Component {
         <Grid>
           <Grid.Row>
             <Grid.Column width={2}>
-              <Icon name='quote left' color='grey' size='huge' />
+              <Icon name='quote left' color='grey' />
             </Grid.Column>
 
             <Grid.Column width={14}>

@@ -11,7 +11,7 @@ class MenuIcon extends Component {
 
     return (
       <Link to={linkPath}>
-        <Icon circular inverted link color='teal' aria-label={label} size='large' name={iconName} /> }
+        <Icon circular inverted link color='teal' aria-label={label} size='large' name={iconName} />
       </Link>
     );
   }
