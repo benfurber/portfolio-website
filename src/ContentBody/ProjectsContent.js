@@ -10,6 +10,46 @@ class ProjectsContent extends Component {
         <Grid stackable='true'>
           <Grid.Row>
             <Grid.Column width={5}>
+              <img src='/images/email-workflow.png' alt='Email' />
+            </Grid.Column>
+            <Grid.Column width={11}>
+              <h3>Email Service</h3>
+              <p>
+                <Button.Group basic icon>
+                  <Button icon size='tiny'>
+                    <Icon inverted color='blue' size='large' name='react' />
+                  </Button>
+                  <Button icon size='tiny'>
+                    <Icon inverted color='yellow' size='large' name='js' />
+                  </Button>
+                </Button.Group>
+                {' '}
+                <Button.Group basic icon>
+                  <Button icon size='tiny'>
+                    <Icon inverted color='blue' size='large' name='react' />
+                  </Button>
+                </Button.Group>
+                {' '}
+                <Button.Group basic icon>
+                  <Button size='tiny'>
+                    <Icon inverted color='orange' size='large' name='aws' />
+                  </Button>
+                </Button.Group>
+                {' '}
+                <Button.Group>
+                  <Button basic size='tiny' color='red'>Jest</Button>
+                </Button.Group>
+              </p>
+
+              <p>A project to mimic the basic functionality of how an email service works.</p>
+              <p>This includes (nearly) all the basic elements you'd require for your own email service; a web client, API for the web client, Simple Mail Transfer Protocol (SMTP) server, Post Office Protocol (POP) server and database (that we're hosting on Amazon Web Services).</p>
+              <p><a href='https://medium.com/@benfurber/so-we-decided-to-rebuild-email-how-hard-could-it-be-71a6a8fcced4'>I wrote an article about some of what I learned.</a></p>
+              <p><a href='https://github.com/charmalt/final-project-main'><Button color='teal'>Github repo</Button></a></p>
+            </Grid.Column>
+          </Grid.Row>
+          <Divider hidden />
+          <Grid.Row>
+            <Grid.Column width={5}>
               <img src='/images/bowling.png' alt='Bowling Challenge' />
             </Grid.Column>
             <Grid.Column width={11}>

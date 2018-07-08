@@ -17,6 +17,12 @@ class ArticlesContent extends Component {
                 before these giants of technology built the future we now live in, most of them learnt to be coders."
         />
         <ArticleSnippet
+          link='https://medium.com/@benfurber/so-we-decided-to-rebuild-email-how-hard-could-it-be-71a6a8fcced4'
+          title="So we decided to rebuild email, how hard could it be..?"
+          date="06/07/18"
+          body="For our final project at Makers (ten days of coding), five of us decided to mimic the basic functionality of how an email service works. We didn't know much about email, so we thought we'd find out."
+        />
+        <ArticleSnippet
           link='https://medium.com/@benfurber/a-few-things-ive-learned-that-s-made-aws-less-scary-f5600f7e662a'
           title="A few things I’ve learned that’s made AWS less scary"
           date="12/06/18"
