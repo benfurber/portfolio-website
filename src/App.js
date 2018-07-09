@@ -24,6 +24,11 @@ class App extends Component {
             <Route path="/projects/" component={ProjectsContent} />
             <Route path="/articles/" component={ArticlesContent} />
             <Route path="/contact/" component={ContactContent} />
+
+            <Route path="/dog" component={() =>
+                window.location = "https://www.amazon.co.uk/Ben-Furber-Dog-Translator/dp/B07B28NH9G/ref=sr_1_1?s=digital-skills&ie=UTF8&qid=1523111280&sr=1-1&keywords=dog+translator"
+            } />
+
           </Switch>
         </Container>
       </Router>
