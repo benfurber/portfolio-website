@@ -17,7 +17,7 @@ class ProjectsContent extends Component {
               <p>
                 <Button.Group basic icon>
                   <Button icon size='tiny'>
-                    <Icon inverted color='blue' size='large' name='react' />
+                    <Icon inverted color='blue' size='large' name='node' />
                   </Button>
                   <Button icon size='tiny'>
                     <Icon inverted color='yellow' size='large' name='js' />
