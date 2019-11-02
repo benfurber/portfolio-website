@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Button } from "semantic-ui-react";
 import MenuIcon from "../MenuIcon/MenuIcon";
 
 class HeaderMenu extends Component {
@@ -14,11 +13,6 @@ class HeaderMenu extends Component {
           linkPath="/articles"
         />
         <MenuIcon label="Contact" iconName="at" linkPath="/contact" />
-        <a href="https://github.com/benfurber/cv/">
-          <Button basic inverted>
-            CV on GitHub
-          </Button>
-        </a>
       </div>
     );
   }
