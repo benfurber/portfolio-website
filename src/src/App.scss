@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Patua+One");
+
+$blue: #232a3b;
+$gold: #c4a86e;
+$gray: #333;
+
+body {
+  background: url("/images/background.png") repeat;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Patua One", sans-serif;
+}
+
+.GiftIntroContent {
+  padding-bottom: 2em;
+
+  h2 {
+    border-top: 6px solid #000;
+    border-bottom: 6px solid #000;
+    display: inline-block;
+    font-size: 4em;
+  }
+}
+
+.GiftSection {
+  background: rgba(35, 42, 59, 0.1);
+  border-top: #232a3b solid 4px;
+  margin: 2em 0 2em 2em;
+  padding: 4em;
+
+  h3 {
+    font-size: 2em;
+  }
+}
+
+.GifIdeas {
+  .GifIdeasBody {
+    padding: 0 2em;
+  }
+
+  h4 {
+    border-bottom: $blue solid 4px;
+    font-size: 1.6em;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.3em;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      border-bottom: $gold solid 2px;
+      color: $gray;
+      list-style: none;
+      font-style: italic;
+      margin-bottom: 1.5em;
+      padding-bottom: 0.3em;
+    }
+  }
+
+  $borderColour: $gold;
+  $boderWidth: 8px;
+  $borderStyle: solid;
+
+  .border {
+    width: 40px;
+    height: 40px;
+  }
+
+  .borderRow {
+    display: block;
+    height: 40px;
+    width: 100%;
+  }
+
+  .borderTopLeft {
+    border-top: $borderColour $boderWidth $borderStyle;
+    border-left: $borderColour $boderWidth $borderStyle;
+    float: left;
+  }
+
+  .borderTopRight {
+    border-top: $borderColour $boderWidth $borderStyle;
+    border-right: $borderColour $boderWidth $borderStyle;
+    float: right;
+  }
+
+  .borderBottomLeft {
+    border-bottom: $borderColour $boderWidth $borderStyle;
+    border-left: $borderColour $boderWidth $borderStyle;
+    float: left;
+  }
+
+  .borderBottomRight {
+    border-bottom: $borderColour $boderWidth $borderStyle;
+    border-right: $borderColour $boderWidth $borderStyle;
+    float: right;
+  }
+}

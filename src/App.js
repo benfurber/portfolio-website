@@ -1,22 +1,21 @@
 import React, { Component } from "react";
-
-import HomeContent from "./ContentBody/HomeContent";
-import AboutContent from "./ContentBody/AboutContent";
-import ProjectsContent from "./ContentBody/ProjectsContent";
-import ArticlesContent from "./ContentBody/ArticlesContent";
-import ContactContent from "./ContentBody/ContactContent";
-
-import { Container, Divider } from "semantic-ui-react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
+import AboutContent from "./ContentBody/AboutContent";
+import ArticlesContent from "./ContentBody/ArticlesContent";
+import ContactContent from "./ContentBody/ContactContent";
+import GiftContent from "./ContentBody/GiftContent";
+import HomeContent from "./ContentBody/HomeContent";
+import ProjectsContent from "./ContentBody/ProjectsContent";
+
 import AppHeader from "./AppHeader/AppHeader";
+import "./src/App.scss";
 
 class App extends Component {
   render() {
     return (
       <Router>
-        <Container className="App">
-          <Divider hidden="true" />
+        <div className="App">
           <AppHeader />
           <Switch>
             <Route exact path="/" component={HomeContent} />
@@ -24,6 +23,7 @@ class App extends Component {
             <Route path="/projects/" component={ProjectsContent} />
             <Route path="/articles/" component={ArticlesContent} />
             <Route path="/contact/" component={ContactContent} />
+            <Route path="/gift/" component={GiftContent} />
 
             <Route
               path="/dog"
@@ -39,7 +39,7 @@ class App extends Component {
               }
             />
           </Switch>
-        </Container>
+        </div>
       </Router>
     );
   }
