@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Divider, Grid } from "semantic-ui-react";
 
 class GiftSection extends Component {
   constructor(props) {
@@ -42,6 +42,22 @@ class GiftSection extends Component {
     }
   }
 
+  renderWishListLinks() {
+    const { title, wishListLinks } = this.props.item;
+
+    if (wishListLinks && wishListLinks.length > 0) {
+      return wishListLinks.map(({ link, website }) => {
+        return (
+          <a className="WishListLink" href={link}>
+            Wishlist for {title} on {website}
+          </a>
+        );
+      });
+    }
+
+    return null;
+  }
+
   render() {
     const { intro, title } = this.props.item;
     const { hasIdeas } = this.state;
@@ -52,12 +68,16 @@ class GiftSection extends Component {
           <Grid.Row columns={hasIdeas ? 2 : 1} container>
             <Grid.Column>
               <h3>{title && title}</h3>
-
               <p>{intro && intro}</p>
             </Grid.Column>
             {this.renderSpecifics()}
           </Grid.Row>
         </Grid>
+        <Divider hidden />
+        <Container textAlign="center" padded>
+          {this.renderWishListLinks()}
+        </Container>
+        <Divider hidden />
       </Grid>
     );
   }

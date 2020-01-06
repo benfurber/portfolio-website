@@ -3,7 +3,7 @@ import { Container, Divider, Grid } from "semantic-ui-react";
 
 import GiftSection from "../Gift/GiftSection";
 
-const content = [
+const giftAreas = [
   {
     title: "Food and drink",
     intro:
@@ -15,10 +15,26 @@ const content = [
       "Coffee beans",
       "San Leo Prosecco (from Waitrose/Ocado)"
     ]
+  },
+  {
+    title: "Books",
+    wishListLinks: [
+      {
+        link:
+          "https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share",
+        website: "Amazon"
+      }
+    ]
   }
 ];
 
 class GiftContent extends Component {
+  renderGiftSectionList() {
+    return giftAreas.map(item => {
+      return <GiftSection item={item} />;
+    });
+  }
+
   render() {
     document.title = "How to buy me a gift";
     return (
@@ -41,7 +57,7 @@ class GiftContent extends Component {
             </Grid.Column>
           </Grid.Row>
         </Grid>
-        <GiftSection item={content[0]} />
+        {this.renderGiftSectionList()}
         <Divider hidden />
       </div>
     );

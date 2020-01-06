@@ -104,3 +104,17 @@ h6 {
     float: right;
   }
 }
+
+.WishListLink {
+  background: $blue;
+  color: #fff;
+  display: inline-block;
+  font-family: "Patua One", sans-serif;
+  font-size: 1.2em;
+  padding: 1.5em 2em;
+
+  &:hover {
+    color: $gold;
+    text-decoration: underline;
+  }
+}
