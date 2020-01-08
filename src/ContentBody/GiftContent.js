@@ -5,6 +5,50 @@ import GiftSection from "../Gift/GiftSection";
 
 const giftAreas = [
   {
+    title: "Cooking",
+    intro:
+      "A lot of my kitchen kit is surprisingly simple, so there's lots I'd love upgrades for.",
+    ideasList: [
+      "Replacement equipment (items in wishlist)",
+      "A nice bottle of fancy olive oil",
+      "Tins and jars of ingredients that aren't carbs"
+    ],
+    wishListLinks: [
+      {
+        link:
+          "https://www.amazon.co.uk/hz/wishlist/ls/3L5C32WRFEODI?ref_=wl_share",
+        website: "Amazon"
+      }
+    ]
+  },
+  {
+    title: "Books",
+    intro:
+      "I basically only read sci-fi, comics and cooking/cook books. If a book isn't in one of those categories I'm probably not going to read it. Always happy to get books second-hand!",
+    wishListLinks: [
+      {
+        link:
+          "https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share",
+        website: "Amazon"
+      }
+    ]
+  },
+  {
+    title: "Prints",
+    intro: "Always loads of bits of art I've got my eye on.",
+    wishListLinks: [
+      {
+        link:
+          "https://www.juniqe.co.uk/wishlist/13114727-5afb-44e5-8c0c-5b2058b9a4c8",
+        website: "JUNIQE"
+      },
+      {
+        link: "https://www.etsy.com/people/benfurber",
+        website: "Etsy"
+      }
+    ]
+  },
+  {
     title: "Food and drink",
     intro:
       "I love fancy food and drinks. Anything for my very minimal cocktail bar is great.",
@@ -17,46 +61,63 @@ const giftAreas = [
     ]
   },
   {
-    title: "Books",
+    title: "Tech/Games",
+    intro:
+      "I don't have much for the Nintendo Switch and there's a few tech bits I'd make good use of.",
     wishListLinks: [
       {
         link:
-          "https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share",
+          "https://www.amazon.co.uk/hz/wishlist/ls/NMPGKSJ3HOQW?ref_=wl_share",
         website: "Amazon"
+      },
+      {
+        link:
+          "https://store.steampowered.com/wishlist/profiles/76561198051857919/#sort=order",
+        website: "Steam"
       }
+    ]
+  },
+  {
+    title: "Random",
+    ideasList: [
+      "LEGO!",
+      "Candles (without a sweet scent)",
+      "Plug powered fairy lights (ideally with a remote)"
     ]
   }
 ];
 
 class GiftContent extends Component {
   renderGiftSectionList() {
-    return giftAreas.map(item => {
-      return <GiftSection item={item} />;
+    return giftAreas.map((item, index) => {
+      return <GiftSection item={item} index={index} />;
     });
   }
 
   render() {
     document.title = "How to buy me a gift";
+
     return (
       <div className="GiftPage">
-        <Grid padded>
-          <Grid.Row>
-            <Grid.Column>
-              <Container className="GiftIntroContent">
+        <Container>
+          <Grid padded stackable>
+            <Grid.Row>
+              <Grid.Column className="GiftIntroContent" width="6">
                 <h2>
                   How to buy me <br />a gift
                 </h2>
-                <Divider hidden />
+              </Grid.Column>
+              <Grid.Column className="GiftIntroContent" width="10">
                 <p>
                   Thanks for thinking about buying me a gift, that's very kind
                   of you. Here's a complete run down of things I like and don't
                   like. I hope this can help you think before purchasing
                   anything.
                 </p>
-              </Container>
-            </Grid.Column>
-          </Grid.Row>
-        </Grid>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Container>
         {this.renderGiftSectionList()}
         <Divider hidden />
       </div>

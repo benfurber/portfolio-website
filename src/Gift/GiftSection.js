@@ -18,26 +18,35 @@ class GiftSection extends Component {
 
     if (hasIdeas) {
       return (
-        <Grid.Column className="GifIdeas">
-          <div className="borderRow">
-            <div className="border borderTopLeft" />
-            <div className="border borderTopRight" />
-          </div>
+        <Grid className="GifIdeas" centered container stackable>
+          <Grid.Row container>
+            <Grid.Column centered container>
+              <div className="borderRow">
+                <div className="border borderTopLeft" />
+                <div className="border borderTopRight" />
+              </div>
+              <Grid className="GifIdeasBody" stackable padded="none">
+                <Grid.Row className="GifIdeasBody" container>
+                  <Grid.Column width={16}>
+                    <h4>Specifics:</h4>
+                  </Grid.Column>
 
-          <Container className="GifIdeasBody">
-            <h4>Specifics:</h4>
-            <ul>
-              {ideasList.map(idea => {
-                return <li>{idea}</li>;
-              })}
-            </ul>
-          </Container>
-
-          <div className="borderRow">
-            <div className="border borderBottomLeft" />
-            <div className="border borderBottomRight" />
-          </div>
-        </Grid.Column>
+                  {ideasList.map(idea => {
+                    return (
+                      <Grid.Column className="idea" width={8}>
+                        <p>{idea}</p>
+                      </Grid.Column>
+                    );
+                  })}
+                </Grid.Row>
+              </Grid>
+              <div className="borderRow">
+                <div className="border borderBottomLeft" />
+                <div className="border borderBottomRight" />
+              </div>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
       );
     }
   }
@@ -46,37 +55,50 @@ class GiftSection extends Component {
     const { title, wishListLinks } = this.props.item;
 
     if (wishListLinks && wishListLinks.length > 0) {
-      return wishListLinks.map(({ link, website }) => {
-        return (
-          <a className="WishListLink" href={link}>
-            Wishlist for {title} on {website}
-          </a>
-        );
-      });
+      return (
+        <Grid.Row container>
+          <Container padded>
+            {wishListLinks.map(({ link, website }) => {
+              return (
+                <a className="WishListLink" href={link}>
+                  Wishlist for {title} on {website}
+                </a>
+              );
+            })}
+          </Container>
+        </Grid.Row>
+      );
     }
 
     return null;
   }
 
   render() {
-    const { intro, title } = this.props.item;
-    const { hasIdeas } = this.state;
+    const { index, item } = this.props;
+    const { intro, title } = item;
+
+    const backgroundStyle = index % 2 ? "GiftSection-odd" : "GiftSection-even";
 
     return (
-      <Grid className="GiftSection" padded>
-        <Grid container stackable>
-          <Grid.Row columns={hasIdeas ? 2 : 1} container>
-            <Grid.Column>
-              <h3>{title && title}</h3>
-              <p>{intro && intro}</p>
-            </Grid.Column>
+      <Grid className={`GiftSection ${backgroundStyle}`} padded="vertically">
+        <Container>
+          <Grid padded="vertically" container stackable>
+            <Grid.Row container>
+              <Grid.Column width="11">
+                <h3>{title && title}</h3>
+                <p className="GiftSectionIntro">{intro && intro}</p>
+              </Grid.Column>
+            </Grid.Row>
+
+            <Divider hidden />
             {this.renderSpecifics()}
-          </Grid.Row>
-        </Grid>
-        <Divider hidden />
-        <Container textAlign="center" padded>
-          {this.renderWishListLinks()}
+            <Divider hidden />
+
+            {this.renderWishListLinks()}
+            <Divider hidden />
+          </Grid>
         </Container>
+
         <Divider hidden />
       </Grid>
     );
