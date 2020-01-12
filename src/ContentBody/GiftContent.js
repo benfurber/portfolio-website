@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container, Divider, Grid } from "semantic-ui-react";
 
 import GiftSection from "../Gift/GiftSection";
+import GiftSectionMenu from "../Gift/GiftSectionMenu";
 
 const giftAreas = [
   {
@@ -61,7 +62,7 @@ const giftAreas = [
     ]
   },
   {
-    title: "Tech/Games",
+    title: "Tech and games",
     intro:
       "I don't have much for the Nintendo Switch and there's a few tech bits I'd make good use of.",
     wishListLinks: [
@@ -102,12 +103,13 @@ class GiftContent extends Component {
         <Container>
           <Grid padded stackable>
             <Grid.Row>
-              <Grid.Column className="GiftIntroContent" width="6">
+              <Grid.Column className="GiftIntroContent" width="11">
                 <h2>
                   How to buy me <br />a gift
                 </h2>
-              </Grid.Column>
-              <Grid.Column className="GiftIntroContent" width="10">
+
+                <Divider hidden />
+
                 <p>
                   Thanks for thinking about buying me a gift, that's very kind
                   of you. Here's a complete run down of things I like and don't
@@ -118,6 +120,7 @@ class GiftContent extends Component {
             </Grid.Row>
           </Grid>
         </Container>
+        <GiftSectionMenu items={giftAreas} />
         {this.renderGiftSectionList()}
         <Divider hidden />
       </div>

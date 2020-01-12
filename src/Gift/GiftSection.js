@@ -18,22 +18,33 @@ class GiftSection extends Component {
 
     if (hasIdeas) {
       return (
-        <Grid className="GifIdeas" centered container stackable>
+        <Grid
+          className="ContainerBordered HalfWhiteBackground"
+          centered
+          container
+          stackable
+        >
           <Grid.Row container>
             <Grid.Column centered container>
               <div className="borderRow">
-                <div className="border borderTopLeft" />
-                <div className="border borderTopRight" />
+                <div className="border borderTopLeft">
+                  <div className="top" />
+                  <div className="left" />
+                </div>
+                <div className="border borderTopRight">
+                  <div className="top" />
+                  <div className="right" />
+                </div>
               </div>
-              <Grid className="GifIdeasBody" stackable padded="none">
-                <Grid.Row className="GifIdeasBody" container>
+              <Grid className="ContainerBorderedBody" stackable padded="none">
+                <Grid.Row className="ContainerBorderedBody" container>
                   <Grid.Column width={16}>
                     <h4>Specifics:</h4>
                   </Grid.Column>
 
                   {ideasList.map(idea => {
                     return (
-                      <Grid.Column className="idea" width={8}>
+                      <Grid.Column className="BorderedListItem" width={8}>
                         <p>{idea}</p>
                       </Grid.Column>
                     );
@@ -41,8 +52,14 @@ class GiftSection extends Component {
                 </Grid.Row>
               </Grid>
               <div className="borderRow">
-                <div className="border borderBottomLeft" />
-                <div className="border borderBottomRight" />
+                <div className="border borderBottomLeft">
+                  <div className="left" />
+                  <div className="bottom" />
+                </div>
+                <div className="border borderBottomRight">
+                  <div className="right" />
+                  <div className="bottom" />
+                </div>
               </div>
             </Grid.Column>
           </Grid.Row>
@@ -77,10 +94,12 @@ class GiftSection extends Component {
     const { index, item } = this.props;
     const { intro, title } = item;
 
-    const backgroundStyle = index % 2 ? "GiftSection-odd" : "GiftSection-even";
+    const backgroundStyle = index % 2 ? "GiftSection-even" : "GiftSection-odd";
 
     return (
       <Grid className={`GiftSection ${backgroundStyle}`} padded="vertically">
+        <a name={`gift-${index}`}></a>
+
         <Container>
           <Grid padded="vertically" container stackable>
             <Grid.Row container>

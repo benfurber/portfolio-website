@@ -4,7 +4,7 @@ import { Container, Divider } from "semantic-ui-react";
 class AboutPanelExperience extends Component {
   render() {
     return (
-      <Container text className="AboutPanelExperience">
+      <Container className="AboutPanelExperience">
         <Container>
           <h3>Developer roles</h3>
           <p>

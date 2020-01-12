@@ -1,17 +1,21 @@
-import React, { Component } from 'react';
-import { Icon } from 'semantic-ui-react'
-import { Link } from 'react-router-dom'
-
+import React, { Component } from "react";
+import { Icon } from "semantic-ui-react";
+import { Link } from "react-router-dom";
 
 class MenuIcon extends Component {
   render() {
-    const label = this.props.label
-    const iconName = this.props.iconName
-    const linkPath = this.props.linkPath
+    const { iconName, label, linkPath } = this.props;
 
     return (
-      <Link to={linkPath}>
-        <Icon circular inverted link color='teal' aria-label={label} size='large' name={iconName} />
+      <Link className="HeaderIcon" to={linkPath}>
+        <Icon
+          inverted
+          link
+          color="white"
+          aria-label={label}
+          size="big"
+          name={iconName}
+        />
       </Link>
     );
   }

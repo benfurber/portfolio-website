@@ -6,15 +6,15 @@ import AboutPanelEducation from "./AboutPanelEducation";
 
 const panes = [
   {
-    menuItem: "Experience",
+    menuItem: { key: "experience", icon: "history", content: "Experience" },
     render: () => (
-      <Tab.Pane as="Container" attached={false}>
+      <Tab.Pane as="Container">
         <AboutPanelExperience />
       </Tab.Pane>
     )
   },
   {
-    menuItem: "Skills/Knowledge",
+    menuItem: { key: "skills", icon: "book", content: "Skills/Knowledge" },
     render: () => (
       <Tab.Pane as="Container" attached={false}>
         <AboutPanelSkills />
@@ -22,7 +22,7 @@ const panes = [
     )
   },
   {
-    menuItem: "Education",
+    menuItem: { key: "education", icon: "law", content: "Education" },
     render: () => (
       <Tab.Pane as="Container" attached={false}>
         <AboutPanelEducation />
@@ -35,43 +35,46 @@ class AboutContent extends Component {
   render() {
     document.title = "About - Ben Furber";
     return (
-      <Container text className="AboutContent">
-        <Container>
-          <h2>About Me</h2>
+      <Container className="AboutContent">
+        <Grid stackable>
+          <Grid.Row>
+            <Grid.Column width={12}>
+              <Container>
+                <h2>About Me</h2>
 
-          <Grid>
-            <Grid.Column width={5}>
-              <Image src="./images/avatar.jpeg" rounded />
+                <Grid>
+                  <Grid.Column width={5}>
+                    <Image src="./images/avatar.jpeg" rounded />
+                  </Grid.Column>
+                  <Grid.Column width={11}>
+                    <p>
+                      I started out as a <strong>website designer</strong>. Ran
+                      digital teams before founding and running a{" "}
+                      <strong>startup</strong>. I was then a{" "}
+                      <strong>product owner</strong> for large charity. Then I
+                      worked as a <strong>developer</strong>/consultant. And now
+                      (finally) I'm a <strong>Technical Coach</strong> for
+                      developers. ...I've done a lot over 13 years in tech.
+                    </p>
+                    <p>
+                      I love being part of building digital products -
+                      challenging myself as much as possible to building complex
+                      and difficult things.
+                    </p>
+                  </Grid.Column>
+                </Grid>
+              </Container>
+              <Divider hidden />
+              <Tab
+                menu={{
+                  inverted: true
+                }}
+                panes={panes}
+              />
+              <Divider hidden />
             </Grid.Column>
-            <Grid.Column width={11}>
-              <p>
-                I started out as a <strong>website designer</strong>. Ran
-                digital teams before founding and running a{" "}
-                <strong>startup</strong>. I was then a{" "}
-                <strong>product owner</strong> for large charity. Then I worked
-                as a <strong>developer</strong>/consultant. And now (finally)
-                I'm a <strong>Technical Coach</strong> for developers. ...I've
-                done a lot over 13 years in tech.
-              </p>
-              <p>
-                I love being part of building digital products - challenging
-                myself as much as possible to building complex and difficult
-                things.
-              </p>
-            </Grid.Column>
-          </Grid>
-        </Container>
-        <Divider hidden />
-        <Tab
-          menu={{
-            color: "teal",
-            inverted: true,
-            attached: false,
-            tabular: false
-          }}
-          panes={panes}
-        />
-        <Divider hidden />
+          </Grid.Row>
+        </Grid>
       </Container>
     );
   }

@@ -6,42 +6,47 @@ class HomeContent extends Component {
   render() {
     document.title = "Ben Furber";
     return (
-      <Container text className="HomeContent">
-        <Divider hidden />
-        <p>
-          Ben is a developer and product manager. He has worked in tech for 13
-          years across a range of disciplines - development, design, product and
-          team management.
-        </p>
-        <Divider hidden />
+      <Container className="HomeContent">
         <Grid stackable="true">
           <Grid.Row>
-            <Grid.Column width={4} textAlign="center">
+            <Grid.Column width={12}>
+              <Divider hidden />
+              <p>
+                Ben is a developer and product manager. He has worked in tech
+                for 13 years across a range of disciplines - development,
+                design, product and team management.
+              </p>
+              <Divider hidden />
+
               <Link to="/about">
-                <Icon name="user" size="massive" color="teal" />
-                <br />
-                <p>Ben's experience, skills and education.</p>
+                <p>
+                  <Icon name="user" size="big" color="black" /> Ben's
+                  experience, skills and education.
+                </p>
               </Link>
-            </Grid.Column>
-            <Grid.Column width={4} textAlign="center">
+              <Divider hidden />
+
               <Link to="/projects">
-                <Icon name="flask" size="massive" color="teal" />
-                <br />
-                <p>Recent projects undertaken as a developer.</p>
+                <p>
+                  <Icon name="flask" size="big" color="black" />
+                  Recent projects undertaken as a developer.
+                </p>
               </Link>
-            </Grid.Column>
-            <Grid.Column width={4} textAlign="center">
+              <Divider hidden />
+
               <Link to="/articles">
-                <Icon name="newspaper outline" size="massive" color="teal" />
-                <br />
-                <p>Random articles and blogs written over the years.</p>
+                <p>
+                  <Icon name="newspaper outline" size="big" color="black" />
+                  Random articles and blogs written over the years.
+                </p>
               </Link>
-            </Grid.Column>
-            <Grid.Column width={4} textAlign="center">
+              <Divider hidden />
+
               <Link to="/contact">
-                <Icon name="at" size="massive" color="teal" />
-                <br />
-                <p>Emails and all the social media.</p>
+                <p>
+                  <Icon name="at" size="big" color="black" />
+                  Emails and all the social media.
+                </p>
               </Link>
             </Grid.Column>
           </Grid.Row>

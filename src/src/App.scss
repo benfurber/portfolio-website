@@ -3,6 +3,7 @@
 $blue: #232a3b;
 $gold: #c4a86e;
 $gray: #333;
+$white: #fff;
 
 body {
   background: url("/images/background.png") repeat fixed;
@@ -15,6 +16,25 @@ h4,
 h5,
 h6 {
   font-family: "Patua One", sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-shadow: 2px 2px #fff;
+}
+
+.AppHeader {
+  background: $blue !important;
+  border-radius: 0 !important;
+  color: $white;
+  border-bottom: 8px solid #11141d !important;
+}
+
+.AppTitle {
+  color: $white;
 }
 
 .GiftPage {
@@ -41,20 +61,56 @@ h6 {
   }
 }
 
+.GiftSectionMenu {
+  background: url("/images/background-blue.png") $blue repeat fixed;
+}
+
 .GiftSection-even {
-  background: rgba(35, 42, 59, 0.1);
+  background: rgba(35, 42, 59, 0.15);
   border-top: $blue solid 4px;
 }
 
 .GiftSection-odd {
-  background: rgba(196, 168, 110, 0.1);
+  background: rgba(196, 168, 110, 0.15);
   border-top: $gold solid 4px;
 }
 
-.GifIdeas {
+.HalfWhiteBackground {
   background: rgba(255, 255, 255, 0.5);
+}
 
-  .GifIdeasBody {
+.BorderedListItem {
+  p {
+    border-bottom: $gold solid 2px;
+    color: $gray;
+    font-style: italic;
+    margin-bottom: 1.5em;
+    padding-bottom: 0.3em;
+  }
+}
+
+.ContentsListItem {
+  p {
+    margin-bottom: 1.5em;
+    padding-bottom: 0.3em;
+
+    a {
+      border-bottom: rgba(255, 255, 255, 0.6) solid 2px;
+      color: rgba(255, 255, 255, 0.6);
+      display: block;
+      font-style: italic;
+      margin-bottom: 0.5em;
+
+      &:hover {
+        border-color: $white;
+        color: $white;
+      }
+    }
+  }
+}
+
+.ContainerBordered {
+  .ContainerBorderedBody {
     padding: 0 2em;
   }
 
@@ -65,16 +121,6 @@ h6 {
     padding-bottom: 0.3em;
   }
 
-  .idea {
-    p {
-      border-bottom: $gold solid 2px;
-      color: $gray;
-      font-style: italic;
-      margin-bottom: 1.5em;
-      padding-bottom: 0.3em;
-    }
-  }
-
   $borderColour: $gold;
   $boderWidth: 8px;
   $borderStyle: solid;
@@ -82,6 +128,7 @@ h6 {
   .border {
     width: 40px;
     height: 40px;
+    display: block;
   }
 
   .borderRow {
@@ -91,28 +138,100 @@ h6 {
   }
 
   .borderTopLeft {
-    border-top: $borderColour $boderWidth $borderStyle;
-    border-left: $borderColour $boderWidth $borderStyle;
     float: left;
+
+    div {
+      box-shadow: 4px 4px 0 0 #fff;
+    }
+
+    .top {
+      background: $borderColour;
+      width: 40px;
+      height: $boderWidth;
+    }
+
+    .left {
+      background: $borderColour;
+      width: $boderWidth;
+      height: 36px;
+    }
   }
 
   .borderTopRight {
-    border-top: $borderColour $boderWidth $borderStyle;
-    border-right: $borderColour $boderWidth $borderStyle;
     float: right;
+
+    div {
+      box-shadow: -4px 4px 0 0 #fff;
+    }
+
+    .top {
+      background: $borderColour;
+      width: 40px;
+      height: $boderWidth;
+    }
+
+    .right {
+      background: $borderColour;
+      width: $boderWidth;
+      height: 36px;
+      float: right;
+    }
   }
 
   .borderBottomLeft {
-    border-bottom: $borderColour $boderWidth $borderStyle;
-    border-left: $borderColour $boderWidth $borderStyle;
     float: left;
+
+    div {
+      box-shadow: 4px -4px 0 0 #fff;
+    }
+
+    .left {
+      background: $borderColour;
+      width: $boderWidth;
+      height: 36px;
+      float: left;
+    }
+
+    .bottom {
+      background: $borderColour;
+      width: 40px;
+      height: $boderWidth;
+      margin-top: 36px;
+    }
   }
 
   .borderBottomRight {
-    border-bottom: $borderColour $boderWidth $borderStyle;
-    border-right: $borderColour $boderWidth $borderStyle;
     float: right;
+
+    div {
+      box-shadow: -4px -4px 0 0 #fff;
+    }
+
+    .right {
+      background: $borderColour;
+      width: $boderWidth;
+      height: 36px;
+      float: right;
+    }
+
+    .bottom {
+      background: $borderColour;
+      width: 40px;
+      height: $boderWidth;
+      margin-top: 36px;
+    }
   }
+}
+
+.Number {
+  font-family: "Patua One", sans-serif;
+  font-size: 2em;
+  font-style: normal;
+  padding-right: 0.5em;
+}
+
+.HeaderIcon {
+  margin-right: 1em;
 }
 
 .WishListLink {

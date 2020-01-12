@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { Container, Divider } from 'semantic-ui-react'
+import React, { Component } from "react";
+import { Container, Divider } from "semantic-ui-react";
 
 class AboutPanelEducation extends Component {
   render() {
     return (
-      <Container text className='AboutPanelEducation'>
+      <Container className="AboutPanelEducation">
         <h3>Makers Academy (April 2018 to July 2018)</h3>
         <p>Highly selective 12 week intensive coding bootcamp.</p>
 
@@ -21,7 +21,6 @@ class AboutPanelEducation extends Component {
 
         <h3>Chartered Institute of Public Relations</h3>
         <p>Foundation certificate in public relations</p>
-
       </Container>
     );
   }
