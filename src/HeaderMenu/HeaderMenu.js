@@ -13,6 +13,7 @@ class HeaderMenu extends Component {
           linkPath="/articles"
         />
         <MenuIcon label="Contact" iconName="at" linkPath="/contact" />
+        <MenuIcon label="Gift guide" iconName="gift" linkPath="/gift" />
       </div>
     );
   }
