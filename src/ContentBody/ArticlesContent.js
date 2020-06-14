@@ -13,13 +13,17 @@ class ArticlesContent extends Component {
           <Grid.Row>
             <Grid.Column width={12}>
               <ArticleSnippet
-                link="https://medium.com/@benfurber/so-finally-im-going-to-be-a-developer-32b678e59126"
-                title="So (finally?) I'm going to be a developer"
-                date="09/04/18"
-                body="If you were a nerdy teen around the turn of the millennium you wanted to be Bill Gates, right?
-                He was the only tech genius/billionaire in town and we had these clever metal boxes in our homes he’d built just for us.
-                Back then I wanted to be Bill Gates, yet it’s only recently I’ve accepted a lesson I should have learnt 20 years;
-                before these giants of technology built the future we now live in, most of them learnt to be coders."
+                body="The quality of your education is often defined by those who deliver it and we’re proud to have a team of industry experts."
+                date="21/04/20"
+                link="https://blog.makersacademy.com/meet-our-team-of-world-class-coaches-92508d14f4ac"
+                title="Meet our team of world-class coaches"
+              />
+              <ArticleSnippet
+                body="If pair programming isn’t the default way a development team works, developers can lose loads of time and effort by forgetting how to most effectively collaborate. As we constantly look to best support each other and those we work with, we think these are the most effective working patterns and behaviours to establish before, during and after a pairing session."
+                date="04/01/19"
+                link="https://thoughtbot.com/blog/how-to-get-better-at-pair-programming"
+                icon="android"
+                title="How to Get Better at Pair Programming"
               />
               <ArticleSnippet
                 link="https://medium.com/@benfurber/so-we-decided-to-rebuild-email-how-hard-could-it-be-71a6a8fcced4"
@@ -38,6 +42,15 @@ class ArticlesContent extends Component {
                 title="Getting my head around testing, ONE THING MEANS ONE THING"
                 date="09/05/18"
                 body="In the last few weeks though everything we’ve been coding at Makers has been test driven so I thought I’d rant one thing that’s taken ages to sink in, one thing means one thing."
+              />
+              <ArticleSnippet
+                link="https://medium.com/@benfurber/so-finally-im-going-to-be-a-developer-32b678e59126"
+                title="So (finally?) I'm going to be a developer"
+                date="09/04/18"
+                body="If you were a nerdy teen around the turn of the millennium you wanted to be Bill Gates, right?
+              He was the only tech genius/billionaire in town and we had these clever metal boxes in our homes he’d built just for us.
+              Back then I wanted to be Bill Gates, yet it’s only recently I’ve accepted a lesson I should have learnt 20 years;
+              before these giants of technology built the future we now live in, most of them learnt to be coders."
               />
               <ArticleSnippet
                 link="https://medium.com/@benfurber/so-i-m-officially-a-founder-now-what-ca88c9516408"
