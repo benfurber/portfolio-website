@@ -3,10 +3,8 @@ import { Button, Grid, Icon, Segment } from "semantic-ui-react";
 
 class ArticleSnippet extends Component {
   render() {
-    const link = this.props.link;
-    const title = this.props.title;
-    const date = this.props.date;
-    const body = this.props.body;
+    const { body, date, icon, link, title } = this.props;
+    const iconName = icon || "medium";
 
     return (
       <Segment piled className="ArticleSnippet">
@@ -24,7 +22,7 @@ class ArticleSnippet extends Component {
               <p>...</p>
               <a href={link}>
                 <Button icon labelPosition="left" floated="right" color="black">
-                  <Icon name="medium" /> Read the full post
+                  <Icon name={iconName} /> Read the full post
                 </Button>
               </a>
             </Grid.Column>
