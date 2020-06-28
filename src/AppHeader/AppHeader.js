@@ -1,22 +1,22 @@
 import React, { Component } from "react";
-import { Container, Header, Segment } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import HeaderMenu from "../HeaderMenu/HeaderMenu";
 
 class AppHeader extends Component {
   render() {
     return (
-      <Segment className="AppHeader">
-        <Container>
-          <Header>
-            <h1 className="AppTitle">
+      <div className="Header">
+        <div className="HeaderTitle">
+          <Container>
+            <h1>
               &#x3C; Ben Furber /&#62;
               <br />
               Product manager turned developer
             </h1>
-          </Header>
-          <HeaderMenu />
-        </Container>
-      </Segment>
+          </Container>
+        </div>
+        <HeaderMenu />
+      </div>
     );
   }
 }

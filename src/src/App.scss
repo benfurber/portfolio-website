@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Patua+One");
 
 $blue: #232a3b;
+$dark-blue: #11141d;
 $gold: #c4a86e;
 $gray: #333;
 $white: #fff;
@@ -26,15 +27,15 @@ h6 {
   text-shadow: 2px 2px #fff;
 }
 
-.AppHeader {
+.HeaderTitle {
   background: $blue !important;
   border-radius: 0 !important;
   color: $white;
-  border-bottom: 8px solid #11141d !important;
-}
+  padding: 2em 0;
 
-.AppTitle {
-  color: $white;
+  h1 {
+    color: $white;
+  }
 }
 
 .GiftPage {
@@ -223,6 +224,18 @@ h6 {
   }
 }
 
+.Header {
+  margin-bottom: 2em;
+}
+
+.HeaderMenu {
+  background-color: $dark-blue;
+}
+
+.HeaderNavigation {
+  padding: 1em 0;
+}
+
 .Number {
   font-family: "Patua One", sans-serif;
   font-size: 2em;
@@ -231,7 +244,22 @@ h6 {
 }
 
 .HeaderIcon {
-  margin-right: 1em;
+  display: inline-block;
+  margin-right: 2em;
+  padding: 0 0.8em 0.5em 0.3em;
+  border-bottom: solid rgba(255, 255, 255, 0.8) 4px;
+
+  &:hover {
+    border-color: $white;
+  }
+}
+
+.selected {
+  border-color: $gold;
+
+  &:hover {
+    border-color: $gold;
+  }
 }
 
 .WishListLink {

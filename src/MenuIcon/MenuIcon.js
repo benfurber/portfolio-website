@@ -1,13 +1,18 @@
 import React, { Component } from "react";
 import { Icon } from "semantic-ui-react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 class MenuIcon extends Component {
   render() {
     const { iconName, label, linkPath } = this.props;
 
     return (
-      <Link className="HeaderIcon" to={linkPath}>
+      <NavLink
+        activeClassName="selected"
+        exact
+        className="HeaderIcon"
+        to={linkPath}
+      >
         <Icon
           inverted
           link
@@ -16,7 +21,7 @@ class MenuIcon extends Component {
           size="big"
           name={iconName}
         />
-      </Link>
+      </NavLink>
     );
   }
 }
