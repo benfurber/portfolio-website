@@ -9,7 +9,7 @@ import HomeContent from "./ContentBody/HomeContent";
 import ProjectsContent from "./ContentBody/ProjectsContent";
 
 import AppHeader from "./AppHeader/AppHeader";
-import "./src/App.scss";
+import "./styles/App.scss";
 
 class App extends Component {
   render() {

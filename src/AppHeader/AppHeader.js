@@ -6,13 +6,15 @@ class AppHeader extends Component {
   render() {
     return (
       <div className="Header">
-        <div className="HeaderTitle">
+        <div className="header-title-container">
           <Container>
-            <h1>
-              &#x3C; Ben Furber /&#62;
-              <br />
-              Product manager turned developer
-            </h1>
+            <div className="header-title">
+              <h1>
+                &#x3C; Ben Furber /&#62;
+                <br />
+                <strong>Product manager turned developer</strong>
+              </h1>
+            </div>
           </Container>
         </div>
         <HeaderMenu />

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Icon } from "semantic-ui-react";
+import { Icon, Responsive } from "semantic-ui-react";
 import { NavLink } from "react-router-dom";
 
 class MenuIcon extends Component {
@@ -10,17 +10,18 @@ class MenuIcon extends Component {
       <NavLink
         activeClassName="selected"
         exact
-        className="HeaderIcon"
+        className="nav-icon"
         to={linkPath}
       >
         <Icon
+          aria-label={label}
+          color="white"
           inverted
           link
-          color="white"
-          aria-label={label}
-          size="big"
           name={iconName}
-        />
+          size="big"
+        />{" "}
+        <Responsive minWidth={768}>{label}</Responsive>
       </NavLink>
     );
   }

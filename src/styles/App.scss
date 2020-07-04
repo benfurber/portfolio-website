@@ -5,6 +5,13 @@ $dark-blue: #11141d;
 $gold: #c4a86e;
 $gray: #333;
 $white: #fff;
+$white-transparent: rgba(255, 255, 255, 0.8);
+
+$small: 4px;
+$medium: 8px;
+$large: 12px;
+$xlarge: 18px;
+$xxlarge: 32px;
 
 body {
   background: url("/images/background.png") repeat fixed;
@@ -27,14 +34,20 @@ h6 {
   text-shadow: 2px 2px #fff;
 }
 
-.HeaderTitle {
-  background: $blue !important;
-  border-radius: 0 !important;
+.header-title-container {
+  background: $blue;
+  padding: $xxlarge 0;
+}
+
+.header-title {
+  border-bottom: $dark-blue $medium solid;
   color: $white;
-  padding: 2em 0;
+  display: inline-block;
+  padding: $large $xxlarge $large $small;
 
   h1 {
     color: $white;
+    font-weight: normal;
   }
 }
 
@@ -228,12 +241,16 @@ h6 {
   margin-bottom: 2em;
 }
 
-.HeaderMenu {
+.nav-wrapper {
   background-color: $dark-blue;
 }
 
-.HeaderNavigation {
+.nav-container {
   padding: 1em 0;
+}
+
+.nav-list {
+  display: flex;
 }
 
 .Number {
@@ -243,19 +260,24 @@ h6 {
   padding-right: 0.5em;
 }
 
-.HeaderIcon {
-  display: inline-block;
+.nav-icon {
+  align-items: baseline;
+  color: $white-transparent;
+  display: flex;
+  font-family: "Patua One", sans-serif;
   margin-right: 2em;
-  padding: 0 0.8em 0.5em 0.3em;
-  border-bottom: solid rgba(255, 255, 255, 0.8) 4px;
+  padding: 0 1em 0.5em 0;
+  border-bottom: solid $white-transparent 4px;
 
   &:hover {
     border-color: $white;
+    color: $white;
   }
 }
 
 .selected {
   border-color: $gold;
+  color: $white;
 
   &:hover {
     border-color: $gold;
