@@ -8,7 +8,7 @@ class GiftSection extends Component {
     const { ideasList } = this.props.item;
 
     this.state = {
-      hasIdeas: ideasList && ideasList.length > 0
+      hasIdeas: ideasList && ideasList.length > 0,
     };
   }
 
@@ -42,7 +42,7 @@ class GiftSection extends Component {
                     <h4>Specifics:</h4>
                   </Grid.Column>
 
-                  {ideasList.map(idea => {
+                  {ideasList.map((idea) => {
                     return (
                       <Grid.Column className="BorderedListItem" width={8}>
                         <p>{idea}</p>
@@ -78,7 +78,7 @@ class GiftSection extends Component {
             {wishListLinks.map(({ link, website }) => {
               return (
                 <a className="WishListLink" href={link}>
-                  Wishlist for {title} on {website}
+                  Link: {website}
                 </a>
               );
             })}

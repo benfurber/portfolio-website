@@ -39,9 +39,9 @@ const giftAreas = [
       {
         link:
           "https://www.amazon.co.uk/hz/wishlist/ls/3L5C32WRFEODI?ref_=wl_share",
-        website: "Amazon"
-      }
-    ]
+        website: "Amazon wishlist",
+      },
+    ],
   },
   {
     title: "Books",
@@ -51,9 +51,9 @@ const giftAreas = [
       {
         link:
           "https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share",
-        website: "Amazon"
-      }
-    ]
+        website: "Amazon wishlist",
+      },
+    ],
   },
   {
     title: "Prints",
@@ -62,13 +62,13 @@ const giftAreas = [
       {
         link:
           "https://www.juniqe.co.uk/wishlist/13114727-5afb-44e5-8c0c-5b2058b9a4c8",
-        website: "JUNIQE"
+        website: "JUNIQE wishlist",
       },
       {
         link: "https://www.etsy.com/people/benfurber",
-        website: "Etsy"
-      }
-    ]
+        website: "Etsy wishlist",
+      },
+    ],
   },
   {
     title: "Food and drink",
@@ -90,14 +90,14 @@ const giftAreas = [
       {
         link:
           "https://www.amazon.co.uk/hz/wishlist/ls/NMPGKSJ3HOQW?ref_=wl_share",
-        website: "Amazon"
+        website: "Amazon wishlist",
       },
       {
         link:
           "https://store.steampowered.com/wishlist/profiles/76561198051857919/#sort=order",
-        website: "Steam"
-      }
-    ]
+        website: "Steam wishlist",
+      },
+    ],
   },
   {
     title: "Random",
