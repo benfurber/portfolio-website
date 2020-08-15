@@ -6,6 +6,27 @@ import GiftSectionMenu from "../Gift/GiftSectionMenu";
 
 const giftAreas = [
   {
+    title: "Plants",
+    intro: "I’m all into my house plants at the moment.",
+    ideasList: ["Must be pet friendly, obvs", "Please get a matching pot"],
+    wishListLinks: [
+      {
+        link:
+          "https://hortology.co.uk/collections/large-tall-houseplants/pet-safe?sort_by=best-selling",
+        website: "For something tall (but fairly thin)",
+      },
+      {
+        link: "https://lazyflora.com/products/terrarium",
+        website: "A terrarium kit",
+      },
+      {
+        link:
+          "https://lazyflora.com/collections/gifts/products/indoor-plant-subscription-pre-pay-with-new-luxury-option?variant=31457130283074",
+        website: "Pre-pay for a subscription",
+      },
+    ],
+  },
+  {
     title: "Cooking",
     intro:
       "A lot of my kitchen kit is surprisingly simple, so there's lots I'd love upgrades for.",
