@@ -33,7 +33,7 @@ const giftAreas = [
     ideasList: [
       "Replacement equipment (items in wishlist)",
       "A nice bottle of fancy olive oil",
-      "Tins and jars of ingredients that aren't carbs"
+      "Tins and jars of ingredients that aren't carbs",
     ],
     wishListLinks: [
       {
@@ -79,8 +79,8 @@ const giftAreas = [
       "Any tequila that isn't Jose Cuervo",
       "Vodka",
       "Coffee beans",
-      "San Leo Prosecco (from Waitrose/Ocado)"
-    ]
+      "San Leo Prosecco (from Waitrose/Ocado)",
+    ],
   },
   {
     title: "Tech and games",
@@ -104,9 +104,9 @@ const giftAreas = [
     ideasList: [
       "LEGO!",
       "Candles (without a sweet scent)",
-      "Plug powered fairy lights (ideally with a remote)"
-    ]
-  }
+      "Plug powered fairy lights (ideally with a remote)",
+    ],
+  },
 ];
 
 class GiftContent extends Component {
