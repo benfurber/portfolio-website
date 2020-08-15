@@ -7,6 +7,7 @@ class ArticlesContent extends Component {
     document.title = "Articles - Ben Furber";
     return (
       <Container className="ArticlesContent">
+        <h2>Articles</h2>
         <Divider hidden />
 
         <Grid stackable>
