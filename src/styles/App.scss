@@ -34,9 +34,16 @@ h6 {
   text-shadow: 2px 2px #fff;
 }
 
+h2 {
+  border-bottom: $small solid $gray;
+  padding-bottom: $small;
+  margin-bottom: $xlarge;
+}
+
 .header-title-container {
   background: $blue;
-  padding: $xxlarge 0;
+  margin: $large $large 0 $large;
+  padding: $xxlarge 0 $xxlarge + $medium 0;
 }
 
 .header-title {
@@ -48,6 +55,7 @@ h6 {
   h1 {
     color: $white;
     font-weight: normal;
+    margin-top: $large;
   }
 }
 
@@ -243,6 +251,9 @@ h6 {
 
 .nav-wrapper {
   background-color: $dark-blue;
+  margin: 0 $xxlarge 0 $xxlarge;
+  top: -$large;
+  position: relative;
 }
 
 .nav-container {
