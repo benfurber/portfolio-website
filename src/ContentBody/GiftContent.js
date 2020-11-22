@@ -1,123 +1,143 @@
-import React, { Component } from "react";
-import { Container, Divider, Grid } from "semantic-ui-react";
+import React, { Component } from 'react';
+import { Container, Divider, Grid } from 'semantic-ui-react';
 
-import GiftSection from "../Gift/GiftSection";
-import GiftSectionMenu from "../Gift/GiftSectionMenu";
+import GiftSection from '../Gift/GiftSection';
+import GiftSectionMenu from '../Gift/GiftSectionMenu';
 
 const giftAreas = [
   {
-    title: "Plants",
-    intro: "I’m all into my house plants at the moment.",
-    ideasList: ["Must be pet friendly, obvs", "Please get a matching pot"],
+    title: 'Christmas 2020',
+    intro: 'To help keep this super simple.',
     wishListLinks: [
       {
         link:
-          "https://hortology.co.uk/collections/large-tall-houseplants/pet-safe?sort_by=best-selling",
-        website: "For something tall (but fairly thin)",
-      },
-      {
-        link: "https://lazyflora.com/products/terrarium",
-        website: "A terrarium kit",
+          'https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share',
+        website: 'Comics',
       },
       {
         link:
-          "https://lazyflora.com/collections/gifts/products/indoor-plant-subscription-pre-pay-with-new-luxury-option?variant=31457130283074",
-        website: "Pre-pay for a subscription",
+          'https://uk.lush.com/wishlist/84ddfbaf-464f-490b-98eb-324b9609abfe',
+        website: 'Lush',
+      },
+      {
+        link:
+          'https://www.hotelchocolat.com/uk/my-account/wish-list/find?WishListID=59ef956f206e5e5a81c8850f57',
+        website: 'Chocolate',
+      },
+      {
+        link: 'https://greenka.uk/pet-friendly',
+        website: 'Local plant shop',
       },
     ],
   },
   {
-    title: "Cooking",
+    title: 'Plants',
+    intro: 'I’m all into my house plants at the moment.',
+    ideasList: ['Must be pet friendly, obvs', 'Please get a matching pot'],
+    wishListLinks: [
+      {
+        link:
+          'https://hortology.co.uk/collections/large-tall-houseplants/pet-safe?sort_by=best-selling',
+        website: 'For something tall (but fairly thin)',
+      },
+      {
+        link: 'https://greenka.uk/pet-friendly',
+        website: "A local shop that'll deliver to me for free",
+      },
+    ],
+  },
+  {
+    title: 'Cooking',
     intro:
       "A lot of my kitchen kit is surprisingly simple, so there's lots I'd love upgrades for.",
     ideasList: [
-      "Replacement equipment (items in wishlist)",
-      "A nice bottle of fancy olive oil",
+      'Replacement equipment (items in wishlist)',
+      'A nice bottle of fancy olive oil',
       "Tins and jars of ingredients that aren't carbs",
     ],
     wishListLinks: [
       {
         link:
-          "https://www.amazon.co.uk/hz/wishlist/ls/3L5C32WRFEODI?ref_=wl_share",
-        website: "Amazon wishlist",
+          'https://www.amazon.co.uk/hz/wishlist/ls/3L5C32WRFEODI?ref_=wl_share',
+        website: 'Amazon wishlist',
       },
     ],
   },
   {
-    title: "Books",
+    title: 'Books',
     intro:
       "I basically only read sci-fi, comics and cooking/cook books. If a book isn't in one of those categories I'm probably not going to read it. Always happy to get books second-hand!",
     wishListLinks: [
       {
         link:
-          "https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share",
-        website: "Amazon wishlist",
+          'https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share',
+        website: 'Amazon wishlist',
       },
     ],
   },
   {
-    title: "Prints",
+    title: 'Prints',
     intro: "Always loads of bits of art I've got my eye on.",
     wishListLinks: [
       {
         link:
-          "https://www.juniqe.co.uk/wishlist/13114727-5afb-44e5-8c0c-5b2058b9a4c8",
-        website: "JUNIQE wishlist",
+          'https://www.juniqe.co.uk/wishlist/13114727-5afb-44e5-8c0c-5b2058b9a4c8',
+        website: 'JUNIQE wishlist',
       },
       {
-        link: "https://www.etsy.com/people/benfurber",
-        website: "Etsy wishlist",
+        link: 'https://www.etsy.com/people/benfurber',
+        website: 'Etsy wishlist',
       },
     ],
   },
   {
-    title: "Food and drink",
+    title: 'Food and drink',
     intro:
-      "I love fancy food and drinks. Anything for my very minimal cocktail bar is great.",
+      'I love fancy food and drinks. Anything for my very minimal cocktail bar is great.',
     ideasList: [
-      "Basically anything from Hotel Chocolat",
+      'Basically anything from Hotel Chocolat',
       "Any tequila that isn't Jose Cuervo",
-      "Vodka",
-      "Coffee beans",
-      "San Leo Prosecco (from Waitrose/Ocado)",
+      'Vodka',
+      'Coffee beans',
+      'San Leo Prosecco (from Waitrose/Ocado)',
     ],
   },
   {
-    title: "Tech and games",
+    title: 'Tech and games',
     intro:
       "I don't have much for the Nintendo Switch and there's a few tech bits I'd make good use of.",
     wishListLinks: [
       {
         link:
-          "https://www.amazon.co.uk/hz/wishlist/ls/NMPGKSJ3HOQW?ref_=wl_share",
-        website: "Amazon wishlist",
+          'https://www.amazon.co.uk/hz/wishlist/ls/NMPGKSJ3HOQW?ref_=wl_share',
+        website: 'Amazon wishlist',
       },
       {
         link:
-          "https://store.steampowered.com/wishlist/profiles/76561198051857919/#sort=order",
-        website: "Steam wishlist",
+          'https://store.steampowered.com/wishlist/profiles/76561198051857919/#sort=order',
+        website: 'Steam wishlist',
       },
     ],
   },
   {
-    title: "Random",
+    title: 'Random',
     ideasList: [
-      "LEGO!",
-      "Candles (without a sweet scent)",
-      "Plug powered fairy lights (ideally with a remote)",
+      'LEGO!',
+      'Candles (without a sweet scent)',
+      'Plug powered fairy lights (ideally with a remote)',
     ],
   },
 ];
 
 class GiftContent extends Component {
   renderGiftSectionList() {
-    return giftAreas.map((item, index) => {
-      return <GiftSection item={item} index={index} />;
-    });
+    return giftAreas.map((item, index) => (
+      <GiftSection item={item} index={index} />
+    ));
   }
 
   render() {
-    document.title = "How to buy me a gift";
+    document.title = 'How to buy me a gift';
 
     return (
       <div className="GiftPage">
@@ -126,7 +146,10 @@ class GiftContent extends Component {
             <Grid.Row>
               <Grid.Column className="GiftIntroContent" width="11">
                 <h2>
-                  How to buy me <br />a gift
+                  How to buy me
+                  {' '}
+                  <br />
+                  a gift
                 </h2>
 
                 <Divider hidden />
