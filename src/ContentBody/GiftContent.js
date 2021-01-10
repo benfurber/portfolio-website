@@ -6,31 +6,6 @@ import GiftSectionMenu from '../Gift/GiftSectionMenu';
 
 const giftAreas = [
   {
-    title: 'Christmas 2020',
-    intro: 'To help keep this super simple.',
-    wishListLinks: [
-      {
-        link:
-          'https://www.amazon.co.uk/hz/wishlist/ls/13YQZE69VOGK2?ref_=wl_share',
-        website: 'Comics',
-      },
-      {
-        link:
-          'https://uk.lush.com/wishlist/84ddfbaf-464f-490b-98eb-324b9609abfe',
-        website: 'Lush',
-      },
-      {
-        link:
-          'https://www.hotelchocolat.com/uk/my-account/wish-list/find?WishListID=59ef956f206e5e5a81c8850f57',
-        website: 'Chocolate',
-      },
-      {
-        link: 'https://greenka.uk/pet-friendly',
-        website: 'Local plant shop',
-      },
-    ],
-  },
-  {
     title: 'Plants',
     intro: 'I’m all into my house plants at the moment.',
     ideasList: ['Must be pet friendly, obvs', 'Please get a matching pot'],
@@ -44,6 +19,14 @@ const giftAreas = [
         link: 'https://greenka.uk/pet-friendly',
         website: "A local shop that'll deliver to me for free",
       },
+      {
+        link: 'https://www.etsy.com/uk/shop/MadeinHanwell',
+        website: "Any of these pots (local again)",
+      },
+      {
+        link: 'https://www.amazon.co.uk/hz/wishlist/ls/2M7AP16506LE?ref_=wl_share',
+        website: "Accessories",
+      }
     ],
   },
   {
@@ -101,6 +84,14 @@ const giftAreas = [
       'Coffee beans',
       'San Leo Prosecco (from Waitrose/Ocado)',
     ],
+    wishListLinks: [
+      {
+        link:
+          'https://www.hotelchocolat.com/uk/my-account/wish-list/find?WishListID=59ef956f206e5e5a81c8850f57',
+        website: 'Chocolate',
+      },
+    ],
+
   },
   {
     title: 'Tech and games',
@@ -126,6 +117,14 @@ const giftAreas = [
       'Candles (without a sweet scent)',
       'Plug powered fairy lights (ideally with a remote)',
     ],
+    wishListLinks: [
+      {
+        link:
+          'https://uk.lush.com/wishlist/84ddfbaf-464f-490b-98eb-324b9609abfe',
+        website: 'Lush',
+      },
+    ],
+
   },
 ];
 
