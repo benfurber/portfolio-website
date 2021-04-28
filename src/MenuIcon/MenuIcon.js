@@ -20,8 +20,8 @@ class MenuIcon extends Component {
           link
           name={iconName}
           size="big"
-        />{" "}
-        <Responsive minWidth={768}>{label}</Responsive>
+        />
+        <div className="icon-text">{label}</div>
       </NavLink>
     );
   }

@@ -264,6 +264,13 @@ h2 {
   display: flex;
 }
 
+@media screen and (max-width: 720px) {
+  .icon-text {
+    display: none;
+  }
+  
+}
+
 .Number {
   font-family: "Patua One", sans-serif;
   font-size: 2em;
